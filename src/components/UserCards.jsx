@@ -15,11 +15,11 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 
 import { addTeam } from "../redux/action";
-import { useSearchParams } from "react-router-dom";
+
 
 function UserCards({ user, access }) {
   const url = window.location.href;
-  const valueAfter3000 = url.split(":3000/")[1];
+  const valueAfter3000 = url.split(".app/")[1];
 
   const toast = useToast();
   const dispatch = useDispatch();
